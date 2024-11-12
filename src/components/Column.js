@@ -12,7 +12,7 @@ const Column = ({ title, image, cards = [] }) => {
       <div className="column-header">
         {image && <img src={image} alt={`${title} icon`} className="column-icon" />}
         <span className="column-title">{title}</span>
-        <span className="item-count">({cards.length})</span>
+        <span className="item-count">{cards.length}</span>
         <div className="column-controls">
           <img src={plusIcon} alt="Add Icon" className="icon plus-icon" />
           <img src={dotIcon} alt="Options Icon" className="icon dot-icon" />
