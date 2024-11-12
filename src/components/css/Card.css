@@ -1,45 +1,47 @@
 /* src/components/css/Card.css */
 
 .card {
-  background-color: #ffffff; /* Set background color to white */
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual separation */
+  padding: 10px; /* Slightly reduced padding */
+  margin-bottom: 8px; /* Slightly reduced margin */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-  font-size: 1em;
+  font-size: 0.85em; /* Reduced font size for title */
   font-weight: bold;
-  margin: 0 0 8px;
+  margin: 0 0 6px; /* Reduced bottom margin */
   color: #333;
 }
 
 .card-details {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 6px; /* Slightly reduced gap between items */
+  margin-top: 6px; /* Reduced top margin */
+  font-size: 0.7em; /* Reduced font size for details */
 }
 
 .priority-icon {
-  width: 16px;
-  height: 16px;
+  width: 12px; /* Reduced icon size */
+  height: 12px;
 }
 
 .card-tags {
   display: flex;
-  gap: 5px;
+  gap: 4px; /* Reduced gap between tags */
   flex-wrap: wrap;
+  font-size: 0.7em; /* Reduced font size for tags */
 }
 
 .card-tag {
   background-color: #e0e0e0;
   color: #333;
-  padding: 4px 8px;
+  padding: 2px 5px; /* Reduced padding */
   border-radius: 4px;
-  font-size: 0.8em;
+  font-size: 0.7em; /* Smaller font size for tags */
   display: flex;
   align-items: center;
 }

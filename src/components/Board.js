@@ -78,7 +78,6 @@ const Board = () => {
     let groupedColumns = [];
 
     if (groupBy === 'status') {
-      // Define each status as a column, even if no tickets are assigned
       const statuses = ['Backlog', 'Todo', 'In progress', 'Done', 'Cancelled'];
       groupedColumns = statuses.map((status) => ({
         title: status,
@@ -86,14 +85,12 @@ const Board = () => {
         cards: tickets.filter((ticket) => ticket.status === status),
       }));
     } else if (groupBy === 'priority') {
-      // Define each priority as a column based on custom order
       groupedColumns = priorityOrder.map((priorityLabel) => ({
         title: priorityLabel,
         image: priorityImages[priorityLabel],
         cards: tickets.filter((ticket) => priorityLabels[ticket.priority] === priorityLabel),
       }));
     } else if (groupBy === 'user') {
-      // Sort users alphabetically by name
       groupedColumns = users
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((user) => ({
@@ -103,7 +100,6 @@ const Board = () => {
         }));
     }
 
-    // Sort cards within each column
     groupedColumns = groupedColumns.map((column) => ({
       ...column,
       cards: column.cards.sort(
